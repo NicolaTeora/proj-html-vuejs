@@ -62,7 +62,7 @@ export default {
             margin: 5px 10px;
         }
         .btn-us{
-        @include btn-oranage-one();
+            @include btn-oranage-one();
         }
         .btn-history{
             @include btn-green-one();
