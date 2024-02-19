@@ -18,6 +18,6 @@ export default {
   <jumbo/>
 </template>
 
-<style lang="scss" >
+<style lang="scss">
 @use './style/general.scss' as *;
 </style>

@@ -1,6 +1,6 @@
 @use './variables' as *;
 
-@mixin btn-ornage-one(){
+@mixin btn-oranage-one(){
     padding: 15px 20px;
     background-color: $color-evidence;
     border-radius: 5px 18px;
@@ -8,4 +8,15 @@
     color: white;
     font-size: 12px;
     font-weight: bold;
+    cursor: pointer;
+}
+@mixin btn-green-one(){
+    padding: 15px 20px;
+    background-color: $color-title;
+    border-radius: 5px 18px;
+    border: none;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
 }

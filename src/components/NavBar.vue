@@ -36,7 +36,7 @@ export default {
         </div>
     </nav>
     <nav class="bottom-nav">
-        <div class="container-two debug2">
+        <div class="container-two">
             <div class="nav-menu">
                 <div class="logo">
                     <img src="../../public/logo.png" alt="">
@@ -96,7 +96,7 @@ export default {
         }
         .option-shop{
             button{
-                @include btn-ornage-one();
+                @include btn-oranage-one();
             }
         }
     } 
