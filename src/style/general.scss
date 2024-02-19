@@ -7,14 +7,32 @@
     box-sizing: border-box;
 }
 
+//debug
+.debug1{
+    border: 1px dashed black;
+}
+.debug2{
+    border: 1px dashed red; //debug
+}
+//---
+
+ul{
+    list-style: none;
+    li{
+        cursor: pointer;
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+
 .container-one{
-    border: 1px dashed black; //debug
     width: 90%;
     margin: 0 auto;
 }
 
 .container-two{
-    border: 1px dashed red;
     width: 80%;
     margin: 0 auto;
 }

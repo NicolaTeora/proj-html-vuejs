@@ -1,1 +1,11 @@
 @use './variables' as *;
+
+@mixin btn-ornage-one(){
+    padding: 15px 20px;
+    background-color: $color-evidence;
+    border-radius: 5px 18px;
+    border: none;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
