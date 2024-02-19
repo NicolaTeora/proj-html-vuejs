@@ -1,2 +1,20 @@
 @use './partials/variables' as *;
 @use './partials/mixins' as *;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-one{
+    border: 1px dashed black; //debug
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container-two{
+    border: 1px dashed red;
+    width: 80%;
+    margin: 0 auto;
+}
