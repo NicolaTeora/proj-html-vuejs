@@ -7,13 +7,16 @@ export default {
 </script>
 
 <template>
-    <p>
-        {{ saluto }}
-    </p>
+    <section>
+
+    </section>
 </template>
 
 <style lang="scss">
 @use '../style/general.scss' as *;
 @use '../style/partials/mixins' as *;
-p{color: rebeccapurple;}
+
+section{
+    background-image: url('../assets/img/H3-slider3');
+}
 </style>
