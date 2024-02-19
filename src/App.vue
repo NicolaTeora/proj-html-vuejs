@@ -1,5 +1,7 @@
 <script>
 import NavBar from './components/NavBar.vue';
+import Jumbo from './components/Jumbo.vue';
+
 export default {
   data(){
     return{
@@ -7,12 +9,13 @@ export default {
     }
   },
   
-  components: { NavBar }
+  components: { NavBar, Jumbo }
 }
 </script>
 
 <template>
-  <nav-bar/>
+  <nav-bar/> <!-- TODO: data props -->
+  <jumbo/>
 </template>
 
 <style lang="scss" >
