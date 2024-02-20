@@ -31,9 +31,14 @@ export default {
 
       Blogs:[
         {
-          imgBlog: './asset/img/blo1-70x70.jpg',
+          imgBlog: './assets/img/blo1-70x70.jpg',
           description: 'Where I live, I am surrounded by fresh, organic food, so I eat really well.',
-          data: 'December 17.2022',
+          dataP: 'December 17.2022',
+        },
+        {
+          imgBlog: './assets/img/blo2-70x70.jpg',
+          description: 'What I live, I am surrounded by fresh, organic food, so I eat really well.',
+          dataP: 'December 16.2022',
         }
       ],
       
@@ -59,7 +64,11 @@ export default {
   :name="name"
   :tag="tag"
   :titoloLinks="titoloLinks"
-  :links="links" />
+  :links="links"
+  :Blogs="Blogs"
+  :imgBlog="imgBlog"
+  :description="description"
+  :dataP="dataP" />
 </template>
 
 <style lang="scss">

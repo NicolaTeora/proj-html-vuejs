@@ -2,7 +2,8 @@
 export default{
     data(){
         return{
-            istruction: 'War should never be entered upon every agency of peace has failed not to be good'
+            istruction: 'War should never be entered upon every agency of peace has failed not to be good',
+            titleBlog: 'Our Latest Blog.'
         }
     },
 
@@ -13,6 +14,10 @@ export default{
         tag: String,
         links: Array,
         titoloLinks: String,
+        Blogs: Array,
+        imgBlog: String,
+        description: String,
+        dataP: String,
     },
 
     methods:{
@@ -44,7 +49,16 @@ export default{
                 </ul>
             </div>
             <div class="blogs">
-                
+                <h3>{{ titleBlog }}</h3>               
+                <div v-for="blog of Blogs">
+                    <figure>
+                        <img :src="getImgPath(blog.imgBlog)" :alt="blog.imgBlog">
+                        <figcaption>
+                            <p class="description">{{ blog.description }}</p>
+                            <p>{{ blog.dataP }}</p>
+                        </figcaption>
+                    </figure>
+                </div>
             </div>
     
         </div>
@@ -56,8 +70,16 @@ export default{
 @use '../style/partials/mixins' as *;
 
 footer{
+    margin-top: 3rem;
+    padding-top: 3rem;
     background-image: url('./assets/img/footer-bg.jpg');
     color: whitesmoke;
+}
+
+.logo-ft{
+    li{
+        line-height: 50px;
+    }
 }
 .container-two{
     display: flex;
@@ -73,6 +95,26 @@ footer{
             height: 50px;
             border-radius: 5px;
             background-color: #007166;
+        }
+    }
+    .emegency{
+        ul{
+            margin-top: 1rem;
+            li{
+                line-height: 35px;
+            }
+        }
+    }
+    .blogs{
+        figure{
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            figcaption{
+                .description{
+                    font-weight: bold;
+                }
+            }
         }
     }
 }
