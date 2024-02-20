@@ -26,7 +26,7 @@ export default{
                         I have a need to make these sorts of connections literal sometimes, and a vehicle often helps to that.
                         I have a relationship to hosting culture. <span>It isn't really about it helps to do that. I have a relationship to hosting culture.</span>
                     </p>
-                    <p>
+                    <p class="bottom-p">
                         Need to make these sorts of connections literal sometimes, and a vehicle often helps to that.
                         I have a relationship to hosting culture.
                     </p>
@@ -53,16 +53,15 @@ export default{
             right: 0;
         }
     }
+    p{ color: #007166; font-size: x-large; }
+    span{ color:#EF9E03 }
+    
     .prev-zero,
     .preview-one{
         width: 50%;
-        .frist-p{
-            font-size: 60px;
-            color: #007166;
-            span{ color:#EF9E03 }
-            // secondo "p" - 
-            // "span" color: $color-evidence
-        }
+        position: relative;
+        .frist-p{ font-size: 60px }
+        .bottom-p{ position: absolute; bottom: 0 }
     }
     
     img{
