@@ -14,7 +14,7 @@ export default{
         <div class="container-two">
             <div style="display: flex;">
                 <div class="prev-zero">
-                    <p>
+                    <p class="frist-p">
                         <span>Look what</span> 
                         consumer power has done with 
                         <span>organic food;</span> 
@@ -22,7 +22,7 @@ export default{
                     </p>
                 </div>
                 <div class="preview-one">
-                    <p>
+                    <p class="">
                         I have a need to make these sorts of connections literal sometimes, and a vehicle often helps to that.
                         I have a relationship to hosting culture. <span>It isn't really about it helps to do that. I have a relationship to hosting culture.</span>
                     </p>
@@ -56,8 +56,10 @@ export default{
     .prev-zero,
     .preview-one{
         width: 50%;
-        p{
-            // primo "p" font-size: 60px
+        .frist-p{
+            font-size: 60px;
+            color: #007166;
+            span{ color:#EF9E03 }
             // secondo "p" - 
             // "span" color: $color-evidence
         }

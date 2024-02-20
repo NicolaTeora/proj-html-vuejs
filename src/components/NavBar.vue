@@ -10,7 +10,7 @@ export default {
 
 <template>
     <nav class="top-nav">
-        <div class="container-two">
+        <div class="container-one">
             <ul>
                 <!-- TODO: in "li" ancor tag -->
                 <li>
@@ -36,7 +36,7 @@ export default {
         </div>
     </nav>
     <nav class="bottom-nav">
-        <div class="container-two">
+        <div class="container-one">
             <div class="nav-menu">
                 <div class="logo">
                     <img src="../../public/logo.png" alt="">
@@ -71,7 +71,7 @@ export default {
     background-color: #007166;
     color: white;
 }
-.container-two{
+.container-one{
     display: flex;
     justify-content: space-between;
     align-items: center;
