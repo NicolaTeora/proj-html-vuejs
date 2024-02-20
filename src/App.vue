@@ -3,14 +3,14 @@ import NavBar from './components/NavBar.vue';
 import Jumbo from './components/Jumbo.vue';
 import SectionOne from './components/SectionOne.vue';
 import ShopProductList from './components/ShopProductList.vue';
-import FooterApp from './components/FooterApp.vue';
+import NewsLetterApp from './components/NewsLetterApp.vue';
 
 export default {
   data(){
     return{}
   },
   
-  components: { NavBar, Jumbo, SectionOne, ShopProductList, FooterApp }
+  components: { NavBar, Jumbo, SectionOne, ShopProductList, NewsLetterApp }
 }
 </script>
 
@@ -20,7 +20,7 @@ export default {
   <section-one/>
   <shop-product-list/> <!-- TODO: fare funzioni calcolo sconto prodotti -->
 
-  <footer-app/>
+  <news-letter-app/>
 </template>
 
 <style lang="scss">
