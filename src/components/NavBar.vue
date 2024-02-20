@@ -1,8 +1,8 @@
 <script>
 export default {
+    // TODO: da passare tramite props.
     data(){
         return{
-            // TODO: da passare tramite props.
             overview: [
                 {
                     tag: 'fa-solid fa-location-dot fa-xs',
@@ -33,6 +33,37 @@ export default {
             ],
 
             openCloseStore: { tag:'fa-solid fa-clock fa-xs', time:'8:00AM - 8:30PM'},
+            
+            menus:[
+                {
+                    name: 'HOME',
+                    tag: 'fa-solid fa-chevron-down fa-xs',
+                },
+                {
+                    name: 'ABOUT',
+                    tag: 'fa-solid fa-chevron-down fa-xs',
+                },
+                {
+                    name: 'SERVICE',
+                    tag: 'fa-solid fa-chevron-down fa-xs',
+                },
+                {
+                    name: 'PORTFOLIO',
+                    tag: 'fa-solid fa-chevron-down fa-xs',
+                },
+                {
+                    name: 'SHOP',
+                    tag: 'fa-solid fa-chevron-down fa-xs',
+                },
+                {
+                    name: 'BLOG',
+                    tag: 'fa-solid fa-chevron-down fa-xs',
+                },
+                {
+                    name: 'CONTACT',
+                    tag: '',
+                },
+            ]
         }
     }
 }
@@ -64,15 +95,10 @@ export default {
                     <img src="../../public/logo.png" alt="">
                 </div>
                 <ul>
-                    <li>
+                    <li v-for="navigator of menus">
+                        <a href="#">{{ navigator.name }}</a>
+                        <i :class="navigator.tag"></i>
                     </li>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="">SERVICE</a></li>
-                    <li><a href="#">PORTFOLIO</a></li>
-                    <li><a href="#">SHOP</a></li>
-                    <li><a href="#">BLOG</a></li>
-                    <li><a href="#">CONTACT</a></li>
                 </ul>
             </div>
             <div class="option-shop">
@@ -100,6 +126,12 @@ export default {
     ul{
         display: flex;
         gap: 15px;
+        li{
+            padding: 5px 2px;
+            &:hover{
+                background-color: lightgray;
+            }
+        }
     }
 }
 .bottom-nav{
