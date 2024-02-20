@@ -41,6 +41,8 @@ export default {
           dataP: 'December 16.2022',
         }
       ],
+
+      gallery:['blo1-70x70.jpg','blo2-70x70.jpg','blo3-70x70.jpg','blo4-70x70.jpg','blo8-70x70.jpg','blo7-70x70.jpg'],
       
       titoloLinks: 'Emergency Link.',
       links: ['Organic Food Shop', 'Our Term & Condition.', 'Gogrin Faq Section', 'Our Team Member', 'Our Latest News Feed']
@@ -68,7 +70,8 @@ export default {
   :Blogs="Blogs"
   :imgBlog="imgBlog"
   :description="description"
-  :dataP="dataP" />
+  :dataP="dataP"
+  :gallery="gallery" />
 </template>
 
 <style lang="scss">

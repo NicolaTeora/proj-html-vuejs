@@ -18,11 +18,15 @@ export default{
         imgBlog: String,
         description: String,
         dataP: String,
+        gallery: Array,
     },
 
     methods:{
         getImgPath(img){
             return new URL(`${img}`, import.meta.url).href;
+        },
+        getGalleryImgPath(img){
+            return new URL(`./assets/img/${img}`, import.meta.url).href;
         }
     }
 }
@@ -31,6 +35,7 @@ export default{
 <template>
     <footer>
         <div class="container-two">
+
             <div class="logo-ft">
                 <ul>
                     <li><img :src="getImgPath(logoFooter)" alt="logo footer"></li>
@@ -42,12 +47,14 @@ export default{
                     </li>
                 </ul>
             </div>
-            <div class="emegency">
+
+            <div class="emergency">
                 <h3>{{titoloLinks}}</h3>
                 <ul>
                     <li v-for="link of links">{{ link }}</li>
                 </ul>
             </div>
+
             <div class="blogs">
                 <h3>{{ titleBlog }}</h3>               
                 <div v-for="blog of Blogs">
@@ -60,9 +67,20 @@ export default{
                     </figure>
                 </div>
             </div>
+
+            <div class="our-gallery">
+                <h3>Our Gallery</h3>
+                <div class="gallery">
+                    <div v-for="image of gallery" class="card">
+                        <img :src="getGalleryImgPath(image)" :alt="getGalleryImgPath(image)">
+                    </div>
+                </div>
+            </div>
     
         </div>
+
     </footer>
+
 </template>
 
 <style lang="scss" scoped>
@@ -71,19 +89,21 @@ export default{
 
 footer{
     margin-top: 3rem;
-    padding-top: 3rem;
+    padding: 3rem 0;
     background-image: url('./assets/img/footer-bg.jpg');
     color: whitesmoke;
 }
 
 .logo-ft{
+    width: 25%;
     li{
         line-height: 50px;
     }
 }
 .container-two{
     display: flex;
-    gap: 1rem;
+    //gap: 1rem;
+    
     .socialLinks{
         display: flex;
         gap: 1rem;
@@ -97,7 +117,8 @@ footer{
             background-color: #007166;
         }
     }
-    .emegency{
+    .emergency{
+        width: 25%;
         ul{
             margin-top: 1rem;
             li{
@@ -106,6 +127,8 @@ footer{
         }
     }
     .blogs{
+        width: 25%;
+
         figure{
             display: flex;
             gap: 1rem;
@@ -115,6 +138,18 @@ footer{
                     font-weight: bold;
                 }
             }
+        }
+    }
+    .our-gallery{
+        width: 25%;
+
+    }
+    .gallery{
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        .card{
+            width: calc(100% / 3 - 20px);
         }
     }
 }
