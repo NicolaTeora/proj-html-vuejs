@@ -51,7 +51,7 @@ export default {
                     price: 23,
                 },
             ],
-            //shopMenus:[]
+            shopMenus:['All product','Apple','food','Orange','Vegetable'],
         }
     },
     methods:{
@@ -72,11 +72,7 @@ export default {
                 <p>Trending Online Store</p>
                 <h2>Gogrin all <span>organic</span> food</h2>
                 <ul>
-                    <li>All product</li>
-                    <li>Apple</li>
-                    <li>food</li>
-                    <li>Orange</li>
-                    <li>Vegetable</li>
+                    <li v-for="i of shopMenus">{{ i }}</li>
                 </ul>
             </div>
 
