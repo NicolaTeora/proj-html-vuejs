@@ -2,7 +2,37 @@
 export default {
     data(){
         return{
-            titlejumbo:'hello'
+            // TODO: da passare tramite props.
+            overview: [
+                {
+                    tag: 'fa-solid fa-location-dot fa-xs',
+                    name: 'geolocalization'
+                },
+                {
+                    tag: 'fa-solid fa-envelope fa-xs',
+                    name: 'name@boolemail.com',
+                }
+            ],
+            socials: [
+                {
+                    name: 'facebook',
+                    tag: 'fa-brands fa-facebook-f fa-xs',
+                },
+                {
+                    name: 'twitter',
+                    tag: 'fa-brands fa-x-twitter fa-xs',
+                },
+                {
+                    name: 'instagram',
+                    tag: 'fa-brands fa-instagram fa-xs',
+                },
+                {
+                    name: 'pinterest',
+                    tag: 'fa-brands fa-pinterest-p fa-xs',
+                }
+            ],
+
+            openCloseStore: { tag:'fa-solid fa-clock fa-xs', time:'8:00AM - 8:30PM'},
         }
     }
 }
@@ -13,25 +43,17 @@ export default {
         <div class="container-one">
             <ul>
                 <!-- TODO: in "li" ancor tag -->
-                <li>
-                    <i class="fa-solid fa-location-dot fa-xs"></i>
-                    geolocalization
-                </li>
-                <li>
-                    <i class="fa-solid fa-envelope fa-xs"></i>
-                    name@boolemail.com
+                <li v-for="contact of overview">
+                    <i :class="contact.tag"></i>
+                    {{ contact.name }}
                 </li>
             </ul>
             <ul>
                 <li>
-                    <i class="fa-solid fa-clock fa-xs"></i>
-                    <!-- TODO: function time clock -->
-                    8:00AM - 8:30PM   
+                    <i :class="openCloseStore.tag"></i>
+                    {{ openCloseStore.time }}   
                 </li>
-                <li><i class="fa-brands fa-facebook-f fa-xs"></i></li>
-                <li><i class="fa-brands fa-x-twitter fa-xs"></i></li>
-                <li><i class="fa-brands fa-instagram fa-xs"></i></li>
-                <li><i class="fa-brands fa-pinterest-p fa-xs"></i></li>
+                <li v-for="social of socials"><i :class="social.tag"></i></li>
             </ul>
         </div>
     </nav>
