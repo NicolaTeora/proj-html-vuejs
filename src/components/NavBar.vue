@@ -82,7 +82,7 @@ export default {
 }
 .bottom-nav{
     margin-top: 0.8rem;
-    .container-two{
+    .container-one{
         .nav-menu{
             display: flex;
             align-items: center;
