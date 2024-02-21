@@ -15,6 +15,12 @@ export default {
         menus: Array,
         name: String,
         tag: String,
+    },
+
+    methods:{
+        SendOrder(){
+            console.log('order send to the bag')
+        }
     }
 }
 </script>
@@ -73,7 +79,7 @@ export default {
             <div class="option-shop">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <i class="fa-solid fa-cart-shopping"></i>
-                <button>Order now</button>
+                <button @click="SendOrder()">Order now</button>
             </div>
         </div>
     </nav>

@@ -6,6 +6,7 @@ import ShopProductList from './components/ShopProductList.vue';
 import SectionOffer from './components/SectionOffer.vue';
 import SectionStatistic from './components/SectionStatistic.vue';
 import TitleSection from './components/TitleSection.vue';
+import SectionTopProduct from './components/SectionTopProduct.vue';
 import FooterApp from './components/FooterApp.vue';
 
 export default {
@@ -120,6 +121,7 @@ export default {
     SectionStatistic, 
     SectionOffer,
     TitleSection,
+    SectionTopProduct,
     FooterApp, 
   }
 }
@@ -139,6 +141,7 @@ export default {
   <section-offer/>
   <section-statistic/> <!-- TODO: inserire le decorazioni -->
   <title-section/>
+  <section-top-product/>
 
   <footer-app
   :logoFooter="logoFooter"

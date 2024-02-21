@@ -57,6 +57,9 @@ export default {
     methods:{
         getImgPath(img){
             return new URL(`${img}`, import.meta.url).href;
+        },
+        viewListProduct(){
+            console.log('go to page the list of product')
         }
     }
 }
@@ -89,7 +92,7 @@ export default {
                     </figure>
                 </div>
             </div>
-            <button>All products</button>
+            <button @click="viewListProduct()">All products</button>
         </div>
 
     </div>
@@ -123,6 +126,10 @@ export default {
         ul{
             display: flex;
             justify-content: space-around;
+            li:hover{
+                cursor: pointer;
+                text-decoration: underline
+            }
             
         }
         button{
