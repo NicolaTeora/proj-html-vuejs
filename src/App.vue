@@ -8,6 +8,7 @@ import SectionStatistic from './components/SectionStatistic.vue';
 import TitleSection from './components/TitleSection.vue';
 import SectionTopProduct from './components/SectionTopProduct.vue';
 import ContactInfoProducts from './components/ContactInfoProducts.vue';
+import TitleSectionTwo from './components/TitleSectionTwo.vue';
 import FooterApp from './components/FooterApp.vue';
 
 export default {
@@ -124,6 +125,7 @@ export default {
     TitleSection,
     SectionTopProduct,
     ContactInfoProducts,
+    TitleSectionTwo,
     FooterApp, 
   }
 }
@@ -145,6 +147,7 @@ export default {
   <title-section/>
   <section-top-product/> <!-- TODO: fare funzioni calcolo sconto prodotti -->
   <contact-info-products/>
+  <title-section-two/>
   
   <footer-app
   :logoFooter="logoFooter"
