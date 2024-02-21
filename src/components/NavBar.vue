@@ -56,7 +56,7 @@ export default {
                         <div class="dropdown">
                             <button>
                                 <a href="#">{{ navigator.name }}</a>
-                                <i :class="navigator.tag"></i>
+                                <span><i :class="navigator.tag"></i></span>
                             </button>
                             <div class="dropdwn-list ">
                                 <ul>
@@ -77,8 +77,12 @@ export default {
                 </ul>
             </div>
             <div class="option-shop">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="opt-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <span class="opt-shop">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </span>
                 <button @click="SendOrder()">Order now</button>
             </div>
         </div>
@@ -150,6 +154,26 @@ export default {
             }
         }
         .option-shop{
+            .opt-search{
+                background-color: #EF9E03;
+                color: whitesmoke;
+                padding: 10px;
+                border-radius: 50%;
+                &:hover{ background-color: #007166; }
+            }
+            .opt-shop{
+                color: #007166;
+                padding: 10px;
+                &:hover{ 
+                    color: whitesmoke;
+                    background-color: #EF9E03;
+                    border-radius: 50%;
+                }
+            }
+            .opt-search,
+            .opt-shop:hover{ 
+                cursor: pointer; 
+            }
             button{
                 @include btn-oranage-one();
             }
