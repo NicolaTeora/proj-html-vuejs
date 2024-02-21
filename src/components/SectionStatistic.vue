@@ -5,13 +5,27 @@ export default{
     data(){
         return{
             store,
-
+            bar: '<img src="./assets/img/counter-shap1.png" alt="">',
+            
             statistics: [
                 {
-                    value: 99,
-                    titleCount: 'details count'
+                    value: '29+',
+                    titleCount: 'Years of Experienced'
+                },
+                {
+                    value: '200+',
+                    titleCount: 'Everyday Online Delivery'
+                },
+                {
+                    value: '20K',
+                    titleCount: 'Client Statysfaction'
+                },
+                {
+                    value: '30+',
+                    titleCount: 'Award Winning'
                 }
             ]
+            
         }
     }
 }
@@ -20,32 +34,16 @@ export default{
 <template>
     <section class="statistic">
         <div class="container-two">
-            <div class="row ">
-                <div class="col-count debug2">
-                    <div class="card debug1">
-                        <span>99</span> <br>
-                        <span>title count</span>
+            <div class="row">
+
+                <div v-for="result of statistics" class="col-count">
+                    
+                    <div class="card ">
+                        <span class="number">{{ result.value }}</span> <br>
+                        <span class="description">{{ result.titleCount }}</span>
                     </div> 
                 </div>
-                <img src="./assets/img/counter-shap1.png" alt="">
-                <div class="col-count debug2">
-                    <div class="card debug1">
-                        <span>99</span> <br>
-                        <span>title count</span>
-                    </div> 
-                </div>
-                <div class="col-count debug2">
-                    <div class="card debug1">
-                        <span>99</span> <br>
-                        <span>title count</span>
-                    </div> 
-                </div>
-                <div class="col-count debug2">
-                    <div class="card debug1">
-                        <span>99</span> <br>
-                        <span>title count</span>
-                    </div> 
-                </div>
+                
             </div>
         </div>
     </section>
@@ -58,13 +56,24 @@ export default{
 .statistic{
     background-image: url('./assets/img/counter-bg.jpg');
     margin-top: 3rem;
-    padding: 20px 0;
+    padding: 45px 0;
 }
 .row{
     display: flex;
+    align-items: center;
     .col-count{
         width: 100%;
+        padding: 0 5px;
         text-align: center;
+        .number{
+            font-size: 50px;
+            color: #EF9E03;
+        }
+        .description{
+            font-size: smaller;
+            font-weight: bold;
+            color: whitesmoke;
+        }
     }
 }
 </style>
