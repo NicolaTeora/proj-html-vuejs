@@ -34,10 +34,12 @@ export default{
             </div>
             
             <div class="preview-two">
+                <span class="arrow "><i class="fa-solid fa-chevron-left"></i></span>
                 <img src="../components/assets/img/fe3.jpg" alt="">
                 <img src="../components/assets/img/fe1.jpg" alt="">
                 <img src="../components/assets/img/fe2.jpg" alt="">
                 <img src="../components/assets/img/fe1.jpg" alt="">
+                <span class="arrow next"><i class="fa-solid fa-chevron-right"></i></span>
             </div>    
         </div>
     </section>
@@ -67,5 +69,22 @@ export default{
     img{
         width: calc(25% - 20px);
         margin: 15px 10px;
+    }
+
+    .preview-two{
+        position: relative;
+        &:hover{
+            .arrow{ display: block; }
+        }
+        .arrow{
+            display: none;
+            position: absolute;
+            padding: 15px;
+            color: whitesmoke;
+            background-color: #EF9E03;
+            top: 100px;
+            &:hover{ background-color: #007166; cursor: pointer; }
+        }
+        .next{ right: -5px }
     }
 </style>
