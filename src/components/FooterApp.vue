@@ -96,7 +96,7 @@ export default{
 
 footer{
     position: relative;
-    margin-top: 3rem;
+    margin-top: 5rem;
     padding-top: 5rem;
     padding-bottom: 3rem;
     background-image: url('./assets/img/footer-bg.jpg');

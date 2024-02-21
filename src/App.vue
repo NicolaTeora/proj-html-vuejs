@@ -3,9 +3,10 @@ import NavBar from './components/NavBar.vue';
 import Jumbo from './components/Jumbo.vue';
 import SectionPreviews from './components/SectionPreviews.vue';
 import ShopProductList from './components/ShopProductList.vue';
-import FooterApp from './components/FooterApp.vue';
 import SectionOffer from './components/SectionOffer.vue';
 import SectionStatistic from './components/SectionStatistic.vue';
+import TitleSection from './components/TitleSection.vue';
+import FooterApp from './components/FooterApp.vue';
 
 export default {
   data(){
@@ -118,6 +119,7 @@ export default {
     ShopProductList, 
     SectionStatistic, 
     SectionOffer,
+    TitleSection,
     FooterApp, 
   }
 }
@@ -136,6 +138,7 @@ export default {
   <shop-product-list/> <!-- TODO: fare funzioni calcolo sconto prodotti -->
   <section-offer/>
   <section-statistic/> <!-- TODO: inserire le decorazioni -->
+  <title-section/>
 
   <footer-app
   :logoFooter="logoFooter"
