@@ -46,8 +46,27 @@ export default {
                 </div>
                 <ul>
                     <li v-for="navigator of menus">
-                        <a href="#">{{ navigator.name }}</a>
-                        <i :class="navigator.tag"></i>
+                        <!-- dropdown navbar -->
+                        <div class="dropdown">
+                            <button>
+                                <a href="#">{{ navigator.name }}</a>
+                                <i :class="navigator.tag"></i>
+                            </button>
+                            <div class="dropdwn-list ">
+                                <ul>
+                                    <li>
+                                        <a href="#">link 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">link 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">link 3</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
                     </li>
                 </ul>
             </div>
@@ -92,6 +111,32 @@ export default {
             align-items: center;
             gap: 25px;
             font-size: small;
+            .dropdown{
+                button{
+                    border: none;
+                    background-color: inherit;
+                }
+                .dropdwn-list{
+                    display: none;
+                    position: absolute;
+                    //display: flex;
+                    //flex-direction: column;
+                    z-index: 1;
+                    //align-items: flex-end;
+                    padding-right: 35px;
+                    background-color: white;
+                    box-shadow: 5px 5px 5px;
+                    ul{
+                        display: block;
+                        li{ font-size: large }
+                    }
+                }
+                &:hover{
+                    .dropdwn-list{
+                        display: block;
+                    }
+                }
+            }
             .logo{
                 img{
                     width: 150px;
