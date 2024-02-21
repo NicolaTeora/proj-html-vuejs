@@ -97,7 +97,8 @@ footer{
 .logo-ft{
     width: 25%;
     li{
-        line-height: 50px;
+        width: 70%;
+        margin-top: 10px;
     }
 }
 .container-two{
@@ -152,7 +153,9 @@ footer{
         display: flex;
         flex-wrap: wrap;
         .card{
+            padding: 5px;
             width: calc(100% / 3 - 20px);
+            img{ width: 100% }
         }
     }
 }

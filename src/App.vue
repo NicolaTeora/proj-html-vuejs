@@ -5,6 +5,7 @@ import SectionOne from './components/SectionOne.vue';
 import ShopProductList from './components/ShopProductList.vue';
 //import NewsLetterApp from './components/NewsLetterApp.vue';
 import FooterApp from './components/FooterApp.vue';
+import SectionOffer from './components/SectionOffer.vue';
 
 export default {
   data(){
@@ -110,7 +111,7 @@ export default {
     }
   },
   
-  components: { NavBar, Jumbo, SectionOne, ShopProductList, FooterApp }
+  components: { NavBar, Jumbo, SectionOne, ShopProductList, FooterApp, SectionOffer }
 }
 </script>
 
@@ -120,10 +121,12 @@ export default {
   :socials="socials"
   :menus="menus"
   :name="name"
-  :tag="tag"/> <!-- TODO: data props -->
+  :tag="tag"/> 
+
   <jumbo/>
   <section-one/>
   <shop-product-list/> <!-- TODO: fare funzioni calcolo sconto prodotti -->
+  <section-offer/>
 
   <!-- <news-letter-app/> -->
   <footer-app
