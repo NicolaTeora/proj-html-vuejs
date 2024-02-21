@@ -1,11 +1,12 @@
 <script>
 import NavBar from './components/NavBar.vue';
 import Jumbo from './components/Jumbo.vue';
-import SectionOne from './components/SectionOne.vue';
+import SectionPreviews from './components/SectionPreviews.vue';
 import ShopProductList from './components/ShopProductList.vue';
 //import NewsLetterApp from './components/NewsLetterApp.vue';
 import FooterApp from './components/FooterApp.vue';
 import SectionOffer from './components/SectionOffer.vue';
+import SectionStatistic from './components/SectionStatistic.vue';
 
 export default {
   data(){
@@ -111,7 +112,15 @@ export default {
     }
   },
   
-  components: { NavBar, Jumbo, SectionOne, ShopProductList, FooterApp, SectionOffer }
+  components: { 
+    NavBar, 
+    Jumbo, 
+    SectionPreviews, 
+    ShopProductList, 
+    FooterApp, 
+    SectionOffer,
+    SectionStatistic, 
+  }
 }
 </script>
 
@@ -124,9 +133,10 @@ export default {
   :tag="tag"/> 
 
   <jumbo/>
-  <section-one/>
+  <section-previews/>
   <shop-product-list/> <!-- TODO: fare funzioni calcolo sconto prodotti -->
   <section-offer/>
+  <section-statistic/>
 
   <!-- <news-letter-app/> -->
   <footer-app
