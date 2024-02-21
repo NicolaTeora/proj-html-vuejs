@@ -1,4 +1,6 @@
 <script>
+import NewsLetterApp from './NewsLetterApp.vue';
+
 export default{
     data(){
         return{
@@ -6,6 +8,8 @@ export default{
             titleBlog: 'Our Latest Blog.'
         }
     },
+
+    components:{ NewsLetterApp },
 
     props:{
         logoFooter: String,
@@ -34,6 +38,9 @@ export default{
 
 <template>
     <footer>
+        <div class="email-news">
+            <news-letter-app/>
+        </div>
         <div class="container-two">
 
             <div class="logo-ft">
@@ -88,10 +95,17 @@ export default{
 @use '../style/partials/mixins' as *;
 
 footer{
+    position: relative;
     margin-top: 3rem;
-    padding: 3rem 0;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
     background-image: url('./assets/img/footer-bg.jpg');
     color: whitesmoke;
+    .email-news{
+        top: -50px;
+        width: 100%;
+        position: absolute;
+    }
 }
 
 .logo-ft{

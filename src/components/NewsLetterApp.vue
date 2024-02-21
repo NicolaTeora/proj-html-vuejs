@@ -12,15 +12,19 @@ export default{
 </script>
 
 <template>
-    <div class="container-two">
-        <div class="news-letter">
-            <label for="newsletters">{{ titleSend }}</label>
-            <div>
-                <input type="email" id="newsletters" placeholder="Your email">
-                <button>SEND</button>
+    <section>
+        
+        <div class="container-two">
+            <div class="news-letter">
+                <label for="newsletters">{{ titleSend }}</label>
+                <div>
+                    <input type="email" id="newsletters" placeholder="Your email">
+                    <button>SEND</button>
+                </div>
             </div>
         </div>
-    </div>
+
+    </section>
     
 </template>
 
@@ -28,6 +32,7 @@ export default{
 @use '../style/general.scss' as *;
 @use '../style/partials/mixins' as *;
 .news-letter{
+    width: 100%;
     //position: absolute;
     display: flex;
     justify-content: space-between;

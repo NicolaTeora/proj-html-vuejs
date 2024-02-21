@@ -55,7 +55,7 @@ export default{
 
 .statistic{
     background-image: url('./assets/img/counter-bg.jpg');
-    margin-top: 3rem;
+    margin: 3rem 0;
     padding: 45px 0;
 }
 .row{
