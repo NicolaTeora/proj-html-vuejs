@@ -51,6 +51,10 @@ export default{
         color: whitesmoke;
         background-color: #007166;
         border: none;
+        &:hover{
+            cursor: pointer;
+            background-color: #EF9E03;
+        }
     }
 }
 

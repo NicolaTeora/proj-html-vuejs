@@ -32,7 +32,7 @@ export default{
 </script>
 
 <template>
-    <section class="statistic">
+    <section class="statistic container-one">
         <div class="container-two">
             <div class="row">
 
@@ -55,7 +55,7 @@ export default{
 
 .statistic{
     background-image: url('./assets/img/counter-bg.jpg');
-    margin: 3rem 0;
+    margin: 3rem auto;
     padding: 45px 0;
 }
 .row{
