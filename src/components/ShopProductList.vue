@@ -85,6 +85,13 @@ export default {
                     <figure>
                         <img :src="getImgPath(product.pic)" :alt="product.pic">
                         <span class="label">{{ product.discount }}</span>
+                        <div class="opt-shop">
+                            <ul>
+                                <li><i class="fa-solid fa-heart"></i></li>
+                                <li><i class="fa-solid fa-eye"></i></li>
+                                <li><i class="fa-solid fa-cart-shopping"></i></li>
+                            </ul>
+                        </div>
                         <figcaption>
                             <p>{{ product.name }}</p>
                             <span>$ {{ product.price }}</span>
@@ -132,9 +139,7 @@ export default {
             }
             
         }
-        button{
-            @include btn-oranage-one();
-        }
+        button{ @include btn-oranage-one() }
         .products{
             display: flex;
             flex-wrap: wrap;
@@ -160,6 +165,31 @@ export default {
                     background-color: #EF9E03;
                     color: whitesmoke;
                 } 
+                &:hover{
+                    .opt-shop{ display: block }
+                }
+                .opt-shop{
+                    display: none;
+                    position: absolute;
+                    bottom: 70px;
+                    left: 80px;
+                    color: black;
+                    ul{
+                        display: flex;
+                        justify-content: center;
+                        gap: 10px;
+                        li{
+                            padding: 10px;
+                            background-color: white;
+                            border-radius: 50%;
+                            border: 1px solid lightgray;
+                            &:hover{
+                                color: whitesmoke;
+                                background-color: #EF9E03;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
