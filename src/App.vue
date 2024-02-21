@@ -9,6 +9,67 @@ import FooterApp from './components/FooterApp.vue';
 export default {
   data(){
     return{
+      overview: [
+        {
+            tag: 'fa-solid fa-location-dot fa-xs',
+            name: 'geolocalization'
+        },
+        {
+            tag: 'fa-solid fa-envelope fa-xs',
+            name: 'name@boolemail.com',
+        }
+      ],
+
+      socials: [
+        {
+            name: 'facebook',
+            tag: 'fa-brands fa-facebook-f fa-xs',
+        },
+        {
+            name: 'twitter',
+            tag: 'fa-brands fa-x-twitter fa-xs',
+        },
+        {
+            name: 'instagram',
+            tag: 'fa-brands fa-instagram fa-xs',
+        },
+        {
+            name: 'pinterest',
+            tag: 'fa-brands fa-pinterest-p fa-xs',
+        }
+      ],
+
+      menus:[
+        {
+            name: 'HOME',
+            tag: 'fa-solid fa-chevron-down fa-xs',
+        },
+        {
+            name: 'ABOUT',
+            tag: 'fa-solid fa-chevron-down fa-xs',
+        },
+        {
+            name: 'SERVICE',
+            tag: 'fa-solid fa-chevron-down fa-xs',
+        },
+        {
+            name: 'PORTFOLIO',
+            tag: 'fa-solid fa-chevron-down fa-xs',
+        },
+        {
+            name: 'SHOP',
+            tag: 'fa-solid fa-chevron-down fa-xs',
+        },
+        {
+            name: 'BLOG',
+            tag: 'fa-solid fa-chevron-down fa-xs',
+        },
+        {
+            name: 'CONTACT',
+            tag: '',
+        },
+      ],
+      
       logoFooter: './assets/img/footer-logo.png',
       socialsContact: [
         {
@@ -54,7 +115,12 @@ export default {
 </script>
 
 <template>
-  <nav-bar/> <!-- TODO: data props -->
+  <nav-bar
+  :overview="overview"
+  :socials="socials"
+  :menus="menus"
+  :name="name"
+  :tag="tag"/> <!-- TODO: data props -->
   <jumbo/>
   <section-one/>
   <shop-product-list/> <!-- TODO: fare funzioni calcolo sconto prodotti -->

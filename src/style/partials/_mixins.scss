@@ -9,6 +9,7 @@
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;
+    &:hover{ background-color: $color-title;}
 }
 @mixin btn-green-one(){
     padding: 15px 20px;
@@ -19,4 +20,5 @@
     font-size: 12px;
     font-weight: bold;
     cursor: pointer;
+    &:hover{ background-color: $color-evidence;}
 }

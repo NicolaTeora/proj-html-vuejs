@@ -16,7 +16,7 @@ export default{
         <div class="news-letter">
             <label for="newsletters">{{ titleSend }}</label>
             <div>
-                <input type="text" id="newsletters" placeholder="Your email">
+                <input type="email" id="newsletters" placeholder="Your email">
                 <button>SEND</button>
             </div>
         </div>

@@ -3,68 +3,18 @@ export default {
     // TODO: da passare tramite props.
     data(){
         return{
-            overview: [
-                {
-                    tag: 'fa-solid fa-location-dot fa-xs',
-                    name: 'geolocalization'
-                },
-                {
-                    tag: 'fa-solid fa-envelope fa-xs',
-                    name: 'name@boolemail.com',
-                }
-            ],
-            socials: [
-                {
-                    name: 'facebook',
-                    tag: 'fa-brands fa-facebook-f fa-xs',
-                },
-                {
-                    name: 'twitter',
-                    tag: 'fa-brands fa-x-twitter fa-xs',
-                },
-                {
-                    name: 'instagram',
-                    tag: 'fa-brands fa-instagram fa-xs',
-                },
-                {
-                    name: 'pinterest',
-                    tag: 'fa-brands fa-pinterest-p fa-xs',
-                }
-            ],
-
             openCloseStore: { tag:'fa-solid fa-clock fa-xs', time:'8:00AM - 8:30PM'},
-            
-            menus:[
-                {
-                    name: 'HOME',
-                    tag: 'fa-solid fa-chevron-down fa-xs',
-                },
-                {
-                    name: 'ABOUT',
-                    tag: 'fa-solid fa-chevron-down fa-xs',
-                },
-                {
-                    name: 'SERVICE',
-                    tag: 'fa-solid fa-chevron-down fa-xs',
-                },
-                {
-                    name: 'PORTFOLIO',
-                    tag: 'fa-solid fa-chevron-down fa-xs',
-                },
-                {
-                    name: 'SHOP',
-                    tag: 'fa-solid fa-chevron-down fa-xs',
-                },
-                {
-                    name: 'BLOG',
-                    tag: 'fa-solid fa-chevron-down fa-xs',
-                },
-                {
-                    name: 'CONTACT',
-                    tag: '',
-                },
-            ]
         }
+    },
+    
+    props:{
+        overview: Array,
+        tag: String,
+        name: String,
+        socials: Array,
+        menus: Array,
+        name: String,
+        tag: String,
     }
 }
 </script>

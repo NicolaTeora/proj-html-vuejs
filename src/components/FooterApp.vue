@@ -115,6 +115,9 @@ footer{
             height: 50px;
             border-radius: 5px;
             background-color: #007166;
+            &:hover{
+                background-color: #EF9E03;
+            }
         }
     }
     .emergency{
