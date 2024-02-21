@@ -23,6 +23,7 @@ export default{
            
             <figure>
                 <img :src="getImgPath(product.pic)" alt="">
+                <span class="label">{{ product.discount }}</span>
                 <figcaption>
                     <p>{{ product.name }}</p>
                     <span>$ {{ product.price }}</span>
@@ -49,6 +50,15 @@ export default{
         padding: 10px 0;
         
         figure{
+            position: relative ;
+
+            .label{
+                position: absolute;
+                // padding: 5px;
+                right: 20px;
+                background-color: #EF9E03;
+                color: whitesmoke;
+            }
             img{
                 width: 250px;
             }
